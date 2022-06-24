@@ -59,6 +59,11 @@ p {
   clip-path: inset(50%);
   margin: -1px;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 /* HEADER */
 
 .header {
@@ -133,7 +138,15 @@ p {
 /* HERO */
 
 .hero {
-  background-color: var(--footer-bg-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-opti.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #c4c4c4;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -252,6 +265,34 @@ p {
   letter-spacing: 0.03em;
   color: var(--primary-description-color);
 }
+
+/* CLIENTS*/
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+.clients-card {
+  color: #afb1b8;
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-icon {
+  fill: currentColor;
+}
+
+.clients-card:hover,
+.clients-card:focus {
+  border: 1px solid #2196f3;
+  fill: #2196f3;
+  color: #2196f3;
+}
+
 /* PORTFOLIO */
 
 .button-container {
@@ -291,6 +332,12 @@ p {
   flex-wrap: wrap;
   display: flex;
   gap: 30px;
+}
+.portfolio-card:hover,
+.portfolio-card:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .projects-item {
   width: 370px;
